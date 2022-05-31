@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css
+    ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+                .basket-icon{
+            color: white;
+            font-size: 150%;
+            right: 50%;
+            top: 20%;
+            position: absolute;
+        }
+        .basket-icon a{
+            text-decoration: none;
+            color: white;
+        }
+        sup{
+            font-size: medium;
+            position: absolute;
+            top: 15%;
+            padding-left: 30%;
+            }
+        section{
+          width: 100%;
+          height: 100px;
+          display: flex;
+          font-size: 150%;
+          background-color: rgb(33,37,41);
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          color: white;
+        }
+    </style>
+    <title>Basket</title>
+</head>
+<body>
+    <div style="position:sticky; top:0; z-index: 1;" class="container">
+        <nav  class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                </ul>
+                <div class="basket-icon">
+                    <a href="basket.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <sup id="productCount"></sup>
+                    </a>
+                </div>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row container-fluid">
+            <table class="table table-dark" id="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Count</th>
+                    <th scope="col">Subtotal</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr> -->
+                </tbody>
+              </table>
+              <section id="total-price" class="d-none"></section>
+        </div>
+    </div>
+</body>
+<script src="assets/apps/basket.js"></script>
+<script src="assets/apps/app.js"></script>
+</html>
