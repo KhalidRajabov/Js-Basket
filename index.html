@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css
+    ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .card{
+            max-height: 500px;
+        }
+        .row{
+            margin-top: 45px;
+        }
+        span{
+            font-weight: 700;
+        }
+        .basket-icon{
+            color: white;
+            font-size: 150%;
+            right: 50%;
+            top: 20%;
+            position: absolute;
+        }
+        .basket-icon a{
+            text-decoration: none;
+            color: white;
+        }
+        sup{
+            font-size: medium;
+            position: absolute;
+            top: 15%;
+            padding-left: 30%;
+            }
+    </style>
+</head>
+<body>
+    <div style="position:sticky; top:0; z-index: 1;" class="container">
+        <nav  class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                </ul>
+                <div class="basket-icon">
+                    <a href="#">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <sup id="productCount">0</sup>
+                    </a>
+                </div>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/images/turbo.jpg" class="card-img-top" alt="...">
+                    <div data-id="1" class="card-body">
+                      <h5 class="card-title">Turbo Gum</h5>
+                      <p class="card-text">Turbo was a brand of chewing gum, produced by Turkish company Kent from late 1980s to 2007</p>
+                      <p class="card-text">Price: <span id="productPrice">1</span>$</p>
+                      <a href="#" class="addBtn btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/images/sega.jpg" class="card-img-top" alt="...">
+                    <div data-id="2" class="card-body">
+                      <h5 class="card-title">Sega 16 bit</h5>
+                      <p class="card-text">The Sega Genesis, known as the Mega Drive is a 16-bit fourth-generation video game console
+                      <p class="card-text">Price: <span id="productPrice">30</span>$</p>
+                      <a href="#" class="addBtn btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/images/tomato.jpg" class="card-img-top" alt="...">
+                    <div data-id="3" class="card-body">
+                      <h5 class="card-title">Tomato</h5>
+                      <p class="card-text">The tomato is the edible berry of the plant Solanum lycopersicum.
+                    </p>
+                      <p class="card-text">Price: <span id="productPrice">3</span>$</p>
+                      <a href="#" class="addBtn btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/images/Lamborghini_Huracan.jpg" class="card-img-top" alt="...">
+                    <div data-id="4" class="card-body">
+                      <h5 class="card-title">Lamborghini Huracán STO</h5>
+                      <p class="card-text">640 hp, 0-100km/h 3.0 seconds</p>
+                      <p class="card-text">Price: <span id="productPrice"> 327,838</span>$</p>
+                      <a href="#" class="addBtn btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/images/Soccer_ball.png"  class="card-img-top" alt="...">
+                    <div data-id="5" class="card-body">
+                      <h5 class="card-title">Soccer Ball</h5>
+                      <p class="card-text">Have fun with your friends.</p>
+                      <p class="card-text">Price: <span id="productPrice">5</span>$</p>
+                      <a href="#" class="addBtn btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/images/nokia_6233.jpg" class="card-img-top" alt="...">
+                    <div data-id="6" class="card-body">
+                      <h5 class="card-title">Nokia 6233</h5>
+                      <p class="card-text">One of the greatest phones ever built</p>
+                      <p class="card-text">Price: <span id="productPrice">50</span>$</p>
+                      <a href="#" class="addBtn btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="assets/apps/app.js"></script>
+</html>
