@@ -8,6 +8,17 @@
     ">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+      .my-empty{
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 15px;
+      }
+      .my-empty {
+        font-size: 300%;
+        color: RED;
+      }
       .add-rmv{
         padding: 0 5px;
         cursor: pointer;
@@ -44,7 +55,7 @@
     <title>Basket</title>
 </head>
 <body>
-    <div style="position:sticky; top:0; z-index: 1;" class="container">
+    <div id="hide-it" style="position:sticky; top:0; z-index: 1;" class="container">
         <nav  class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Navbar</a>
@@ -54,7 +65,7 @@
               <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.html">Shopping</a>
                   </li>
                 </ul>
                 <div class="basket-icon">
@@ -72,7 +83,7 @@
           </nav>
     </div>
 
-    <div class="container mt-5">
+    <div id="hide-this" class="container mt-5">
         <div class="row container-fluid">
             <table class="table table-dark" id="table">
                 <thead>
@@ -100,6 +111,12 @@
               
         </div>
     </div>
+
+    <DIV id="basket-notifier" class="my-empty container  ">
+      <img src="assets/images/shop.jpg" style="margin-top: 400px;" width="400" alt="">
+      <p>Basket is empty</p>
+      <a href="index.html">Go shopping</a>
+    </DIV>
 </body>
 <script src="assets/apps/basket.js"></script>
 <script src="assets/apps/app.js"></script>

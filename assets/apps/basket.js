@@ -1,10 +1,25 @@
 let table = document.getElementById("table")
 let sumTotalPrice = 0;
 let clearLS = document.getElementById("clear-ls")
+let fcont= document.getElementById("hide-it")
+let scont= document.getElementById("hide-this")
+let basketNotifier = document.getElementById("basket-notifier")
 clearLS.onclick=_=>{
     localStorage.clear()
     location.reload()
 }
+window.addEventListener('load', (event) => {
+    if (localStorage.getItem("basket")==null) {
+     fcont.classList.add("d-none")
+     scont.classList.add("d-none")
+     basketNotifier.classList.remove("d-none")
+    }
+    else{
+        fcont.classList.remove("d-none")
+        scont.classList.remove("d-none")
+        basketNotifier.classList.add("d-none")
+    }
+  });
 if (localStorage.getItem("basket")!=null) {
     let arr = JSON.parse(localStorage.getItem("basket"))
     arr.forEach(product => {
@@ -26,7 +41,7 @@ if (localStorage.getItem("basket")!=null) {
             //let minusicon = document.createElement("i")
             //minusicon.classList.add("fa-solid", "fa-circle-minus")
             let tdCount = document.createElement("td")
-            tdCount.innerText= minusicon + product.count  + plusicon ;
+            tdCount.innerText= product.count  ;
             
             let SubTd = document.createElement("td")
             let spantag = `<span class="span" style="cursor: pointer; color: red; font-size: 150%" id="span">x</span>`
