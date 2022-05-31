@@ -1,5 +1,10 @@
 let table = document.getElementById("table")
 let sumTotalPrice = 0;
+let clearLS = document.getElementById("clear-ls")
+clearLS.onclick=_=>{
+    localStorage.clear()
+    location.reload()
+}
 if (localStorage.getItem("basket")!=null) {
     let arr = JSON.parse(localStorage.getItem("basket"))
     arr.forEach(product => {
@@ -16,13 +21,18 @@ if (localStorage.getItem("basket")!=null) {
             tdName.innerText=product.name
             let tdPrice = document.createElement("td")
             tdPrice.innerText=product.price + "$"
+            //let plusicon = document.createElement("i")
+            //plusicon.classList.add("fa-solid", "fa-circle-plus")
+            //let minusicon = document.createElement("i")
+            //minusicon.classList.add("fa-solid", "fa-circle-minus")
             let tdCount = document.createElement("td")
-            tdCount.innerText=product.count
+            tdCount.innerText= minusicon + product.count  + plusicon ;
+            
             let SubTd = document.createElement("td")
-            let spantag = `<span class="span" style="cursor: pointer" id="span">x</span>`
+            let spantag = `<span class="span" style="cursor: pointer; color: red; font-size: 150%" id="span">x</span>`
             let deleteTd = document.createElement("td")
             deleteTd.innerHTML=spantag
-            SubTd.innerHTML=product.count*product.price; 
+            SubTd.innerHTML=product.count*product.price + "$"; 
             tr.append(tdImage, tdName, tdPrice, tdCount, SubTd, deleteTd)
             table.lastElementChild.append(tr)
             sumTotalPrice+=product.count*product.price;
@@ -40,6 +50,7 @@ if (localStorage.getItem("basket")!=null) {
 
 
     });
+
     let div = document.getElementById("total-price")
     div.classList.add("container", "total-price-section")
     div.classList.remove("d-none")
