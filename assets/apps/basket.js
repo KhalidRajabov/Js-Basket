@@ -9,6 +9,7 @@ clearLS.onclick = _ => {
     location.reload()
 }
 window.addEventListener('load', (event) => {
+
     if (localStorage.getItem("basket") == null) {
         fcont.classList.add("d-none")
         scont.classList.add("d-none")
