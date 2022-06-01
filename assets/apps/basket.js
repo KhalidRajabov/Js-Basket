@@ -53,12 +53,10 @@ if (localStorage.getItem("basket") != null) {
             sumTotalPrice += product.count * product.price;
             deleteTd.onclick = function () {
                 this.parentElement.remove()
-                let arr1 = JSON.parse(localStorage.getItem("basket")) 
-                arr1.pop()
-                localStorage.setItem("basket", JSON.stringify(arr1));
-
-                location.reload()
-
+                    product.count=0
+                    localStorage.setItem("basket", JSON.stringify(arr));
+                    location.reload()
+                
             }
 
         }
